@@ -301,3 +301,9 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+
+
+# Configs
+# =========================
+src/TeammateOnlineIdentity/config.Development.json
