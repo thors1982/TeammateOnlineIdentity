@@ -14,7 +14,7 @@ namespace TeammateOnlineIdentity.Database.Repositories
             context = newContext;
         }
 
-        public UserProfile Add(UserProfile userProfile)
+        public UserProfiles Add(UserProfiles userProfile)
         {
             context.UserProfiles.Add(userProfile);
             context.SaveChanges();
@@ -22,32 +22,32 @@ namespace TeammateOnlineIdentity.Database.Repositories
             return userProfile;
         }
 
-        public UserProfile FinBdyId(int id)
+        public UserProfiles FinBdyId(int id)
         {
             return context.UserProfiles.FirstOrDefault(x => x.Id == id);
         }
 
-        public UserProfile FindByEmailAddress(string emailAddress)
+        public UserProfiles FindByEmailAddress(string emailAddress)
         {
             return context.UserProfiles.FirstOrDefault(x => x.EmailAddress == emailAddress);
         }
 
-        public UserProfile FindByGoogleId(string googleId)
+        public UserProfiles FindByGoogleId(string googleId)
         {
             return context.UserProfiles.FirstOrDefault(x => x.GoogleId == googleId);
         }
 
-        public UserProfile FindByFacebookId(string facebookId)
+        public UserProfiles FindByFacebookId(string facebookId)
         {
             return context.UserProfiles.FirstOrDefault(x => x.FacebookId == facebookId);
         }
 
-        public IEnumerable<UserProfile> GetAll()
+        public IEnumerable<UserProfiles> GetAll()
         {
             return context.UserProfiles.ToList();
         }
 
-        public void Update(UserProfile userProfile)
+        public void Update(UserProfiles userProfile)
         {
             context.UserProfiles.Update(userProfile);
             context.SaveChanges();

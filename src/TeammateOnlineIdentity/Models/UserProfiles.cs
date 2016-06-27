@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TeammateOnlineIdentity.Models
 {
-    public class UserProfile
+    public class UserProfiles
     {
         [Key]
         public int Id { get; set; }

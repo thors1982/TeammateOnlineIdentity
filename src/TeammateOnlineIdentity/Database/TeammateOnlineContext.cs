@@ -7,7 +7,7 @@ namespace TeammateOnlineIdentity.Database
 {
     public class TeammateOnlineContext : DbContext
     {
-        public DbSet<UserProfile> UserProfiles { get; set; }
+        public DbSet<UserProfiles> UserProfiles { get; set; }
         
         public TeammateOnlineContext()
         {

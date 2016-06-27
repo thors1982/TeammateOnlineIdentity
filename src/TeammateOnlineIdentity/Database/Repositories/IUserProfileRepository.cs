@@ -5,12 +5,12 @@ namespace TeammateOnlineIdentity.Database.Repositories
 {
     public interface IUserProfileRepository
     {
-        UserProfile Add(UserProfile userProfile);
-        UserProfile FinBdyId(int id);
-        UserProfile FindByEmailAddress(string emailAddress);
-        UserProfile FindByGoogleId(string googleId);
-        UserProfile FindByFacebookId(string facebookId);
-        IEnumerable<UserProfile> GetAll();
-        void Update(UserProfile userProfile);
+        UserProfiles Add(UserProfiles userProfile);
+        UserProfiles FinBdyId(int id);
+        UserProfiles FindByEmailAddress(string emailAddress);
+        UserProfiles FindByGoogleId(string googleId);
+        UserProfiles FindByFacebookId(string facebookId);
+        IEnumerable<UserProfiles> GetAll();
+        void Update(UserProfiles userProfile);
     }
 }

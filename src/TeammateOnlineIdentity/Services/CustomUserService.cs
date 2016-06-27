@@ -23,7 +23,7 @@ namespace TeammateOnlineIdentity.Services
         public override Task AuthenticateExternalAsync(ExternalAuthenticationContext context)
         {
             var provider = context.ExternalIdentity.Provider;
-            UserProfile existingUser = null;
+            UserProfiles existingUser = null;
             switch(provider)
             {
                 case "Facebook":
@@ -36,7 +36,7 @@ namespace TeammateOnlineIdentity.Services
 
             if(existingUser == null)
             {
-                var newUser = new UserProfile();
+                var newUser = new UserProfiles();
                 // Add other claims
                 newUser.EmailAddress = context.ExternalIdentity.Claims.FirstOrDefault(x => x.Type == IdentityServer3.Core.Constants.ClaimTypes.Email).Value;
                 newUser.FirstName = context.ExternalIdentity.Claims.FirstOrDefault(x => x.Type == IdentityServer3.Core.Constants.ClaimTypes.GivenName).Value;
