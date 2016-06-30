@@ -69,10 +69,9 @@ namespace TeammateOnlineIdentity
 
             // Add the platform handler to the request pipeline.
             app.UseIISPlatformHandler();
-            if (env.EnvironmentName == "Development")
+            if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseRuntimeInfoPage("/runtimeinfo");
             }
 
             var certFile = _environment.ApplicationBasePath + $"{Path.DirectorySeparatorChar}idsrv4test.pfx";
