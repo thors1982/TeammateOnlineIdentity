@@ -23,7 +23,7 @@ namespace TeammateOnlineIdentity.Configuration
                     AccessTokenLifetime = 3600,   // default 3600
                     RedirectUris = new List<string>
                     {
-                        "http://localhost:59505/oauth-callback",
+                        "http://localhost:59505/auth/callback",
                         // for silent refresh
                         "http://localhost:59505/silentrefreshframe.html",
                     },
